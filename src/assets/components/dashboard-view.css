@@ -1,0 +1,94 @@
+/* Dashboard View Styles */
+.dashboard-wrapper {
+  @apply flex flex-col w-full h-full min-h-0 relative;
+  --bottom-palette-padding: 116px;
+}
+
+.dashboard-content {
+  @apply flex flex-col h-full w-full flex-1 min-h-0;
+}
+
+.dashboard-grid-wrapper {
+  @apply flex w-full h-full bg-surface-100 dark:bg-surface-950 min-h-0 overflow-auto;
+}
+
+.dashboard-wrapper.edit-mode .dashboard-grid-wrapper {
+  @apply pb-[var(--bottom-palette-padding)];
+}
+
+.dashboard-grid-wrapper-inner {
+  @apply w-full relative h-full min-h-max;
+}
+
+.dashboard-empty-state {
+  @apply flex justify-center items-center absolute top-0 bottom-0 left-0 right-0;
+}
+
+.dashboard-wrapper.edit-mode .dashboard-empty-state {
+  @apply -bottom-[var(--bottom-palette-padding)]!;
+}
+
+.dashboard-empty-state-inner {
+  @apply flex flex-col items-center justify-center max-w-[250px] gap-3;
+}
+
+.dashboard-empty-state-label-wrapper {
+  @apply flex flex-col items-center justify-center;
+}
+
+.dashboard-empty-state-img {
+  @apply h-[164px] w-[164px];
+}
+
+.dashboard-empty-state-title {
+  @apply text-surface-900 dark:text-surface-100 font-medium text-center mb-0.5;
+}
+
+.dashboard-empty-state-text {
+  @apply text-sm text-surface-500  dark:text-surface-400 text-center;
+}
+
+/* Prevent interaction during drag */
+.dropzone.dragging .draggable-card * {
+  @apply pointer-events-none;
+}
+
+/* Grid Layout Plus placeholder styles */
+.vgl-layout {
+  @apply w-full;
+  --vgl-placeholder-bg: var(--p-primary-300) !important;
+  --vgl-resizer-border-color: var(--p-surface-500) !important;
+  --vgl-resizer-size: 16px !important;
+}
+
+.app-dark .vgl-layout {
+  --vgl-placeholder-bg: var(--p-primary-500) !important;
+  --vgl-resizer-border-color: var(--p-surface-100) !important;
+}
+
+.vgl-item--placeholder {
+  @apply rounded-lg!;
+}
+
+.vgl-item--placeholder .vgl-item__resizer {
+  @apply hidden;
+}
+
+/* Prevent text selection during resize */
+.vgl-layout:has(.vgl-item.vgl-item--resizing) .vgl-item {
+  @apply select-none;
+}
+
+.vgl-layout:has(.vgl-item.vgl-item--resizing) .vgl-item:not(.vgl-item--resizing) {
+  -webkit-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  pointer-events: none !important;
+}
+
+.vgl-layout:has(.vgl-item.vgl-item--resizing) .vgl-item:not(.vgl-item--resizing) * {
+  -webkit-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  pointer-events: none !important;
+}

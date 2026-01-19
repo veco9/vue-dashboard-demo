@@ -1,0 +1,273 @@
+import type { ThemePalette, ChartColorPalette } from "./types";
+
+/** Curated chart color palettes - harmonious colors for each theme */
+export const chartPalettes: Record<string, ChartColorPalette> = {
+  // Azia - Purple and blue analytics theme (default)
+  azia: {
+    main: ["#6F42C1", "#007BFF", "#17A2B8", "#00CCCC", "#0DCAF0", "#5A32A3", "#0056b3"],
+    light: ["#C9B8E5", "#99CDFF", "#8FE0EB", "#99EBEB", "#A8ECFA", "#C4B0E3", "#8CBAFF"],
+  },
+  // Stripe - Professional purple-blue fintech theme
+  stripe: {
+    main: ["#635BFF", "#0A2540", "#00D4FF", "#7A73FF", "#0048B3", "#9C8CFF", "#003D99"],
+    light: ["#CCC9FF", "#7A9BB8", "#99ECFF", "#D4D0FF", "#8CB8E5", "#DDD8FF", "#8CB3E0"],
+  },
+  // Vercel - Minimal blue developer theme
+  vercel: {
+    main: ["#0070F3", "#171717", "#50E3C2", "#7928CA", "#FF0080", "#F5A623", "#79FFE1"],
+    light: ["#99C7FF", "#8A8A8A", "#B8F5E8", "#CCA8E8", "#FF99CC", "#FADB9F", "#C7FFF5"],
+  },
+  // Figma - Colorful multi-accent design theme
+  figma: {
+    main: ["#F24E1E", "#A259FF", "#1ABCFE", "#0ACF83", "#FF7262", "#9747FF", "#14B8A6"],
+    light: ["#F9BBA8", "#D9C2FF", "#A8E4FF", "#9EEFCF", "#FFCCC6", "#D4B8FF", "#9EF0E6"],
+  },
+  // Purple - Vibrant purple with mint and coral accents
+  purple: {
+    main: ["#A05AFF", "#1BCFB4", "#4BCBEB", "#FE9496", "#9E58FF", "#15a890", "#3aa8c7"],
+    light: ["#DCC7FF", "#9EEFDF", "#B1E8F7", "#FFD9DA", "#DBC5FF", "#8EF0DF", "#B1EEF9"],
+  },
+  // Sky - Ocean blues with warm accents
+  sky: {
+    main: ["#0ea5e9", "#6366f1", "#8b5cf6", "#06b6d4", "#3b82f6", "#0891b2", "#7c3aed"],
+    light: ["#BAE6FD", "#C7D2FE", "#DDD6FE", "#A5F3FC", "#BFDBFE", "#7EEEF8", "#C4B5FD"],
+  },
+  // Teal - Ocean depths with complementary colors
+  teal: {
+    main: ["#14b8a6", "#0891b2", "#059669", "#0ea5e9", "#10b981", "#06b6d4", "#0d9488"],
+    light: ["#99F6E4", "#7EF0F5", "#A7F3D0", "#BAE6FD", "#86EFAC", "#A5F3FC", "#81E6D9"],
+  },
+  // Indigo - Deep blues with vibrant accents
+  indigo: {
+    main: ["#6366f1", "#8b5cf6", "#4f46e5", "#a855f7", "#3b82f6", "#7c3aed", "#2563eb"],
+    light: ["#C7D2FE", "#DDD6FE", "#A5B4FC", "#E9D5FF", "#BFDBFE", "#C4B5FD", "#93C5FD"],
+  },
+};
+
+/** Primary color palettes for theme selection */
+export const primaryPalettes: ThemePalette[] = [
+  {
+    name: "azia",
+    label: "Azia",
+    color: "#6F42C1",
+    palette: {
+      50: "#f5f1fa",
+      100: "#ebe4f5",
+      200: "#d7c9eb",
+      300: "#b99bdb",
+      400: "#9b6dc9",
+      500: "#6F42C1",
+      600: "#5a32a3",
+      700: "#4a2987",
+      800: "#3d226e",
+      900: "#321c5a",
+      950: "#1f1038",
+    },
+  },
+  {
+    name: "stripe",
+    label: "Stripe",
+    color: "#635BFF",
+    palette: {
+      50: "#f5f5ff",
+      100: "#ebebff",
+      200: "#d6d4ff",
+      300: "#b8b4ff",
+      400: "#9490ff",
+      500: "#635BFF",
+      600: "#5248e6",
+      700: "#4339c2",
+      800: "#382f9e",
+      900: "#302a82",
+      950: "#1c1850",
+    },
+  },
+  {
+    name: "vercel",
+    label: "Vercel",
+    color: "#0070F3",
+    palette: {
+      50: "#eff6ff",
+      100: "#dbeafe",
+      200: "#bfdbfe",
+      300: "#93c5fd",
+      400: "#60a5fa",
+      500: "#0070F3",
+      600: "#005cc4",
+      700: "#004a9e",
+      800: "#003a7a",
+      900: "#002d5c",
+      950: "#001a38",
+    },
+  },
+  {
+    name: "figma",
+    label: "Figma",
+    color: "#F24E1E",
+    palette: {
+      50: "#fef3f2",
+      100: "#fee4e1",
+      200: "#fecdca",
+      300: "#fba8a1",
+      400: "#f67a6b",
+      500: "#F24E1E",
+      600: "#de3a16",
+      700: "#bb2d10",
+      800: "#9a2912",
+      900: "#802916",
+      950: "#451106",
+    },
+  },
+  {
+    name: "purple",
+    label: "Purple",
+    color: "#A05AFF",
+    palette: {
+      50: "#faf5ff",
+      100: "#f3e8ff",
+      200: "#e9d5ff",
+      300: "#d8b4fe",
+      400: "#c79cff",
+      500: "#A05AFF",
+      600: "#8b3fe6",
+      700: "#7628cc",
+      800: "#6020a8",
+      900: "#4f1a8a",
+      950: "#310f5c",
+    },
+  },
+  {
+    name: "sky",
+    label: "Sky",
+    color: "#0ea5e9",
+    palette: {
+      50: "#f0f9ff",
+      100: "#e0f2fe",
+      200: "#bae6fd",
+      300: "#7dd3fc",
+      400: "#38bdf8",
+      500: "#0ea5e9",
+      600: "#0284c7",
+      700: "#0369a1",
+      800: "#075985",
+      900: "#0c4a6e",
+      950: "#082f49",
+    },
+  },
+  {
+    name: "teal",
+    label: "Ocean",
+    color: "#14b8a6",
+    palette: {
+      50: "#f0fdfa",
+      100: "#ccfbf1",
+      200: "#99f6e4",
+      300: "#5eead4",
+      400: "#2dd4bf",
+      500: "#14b8a6",
+      600: "#0d9488",
+      700: "#0f766e",
+      800: "#115e59",
+      900: "#134e4a",
+      950: "#042f2e",
+    },
+  },
+  {
+    name: "indigo",
+    label: "Indigo",
+    color: "#6366f1",
+    palette: {
+      50: "#eef2ff",
+      100: "#e0e7ff",
+      200: "#c7d2fe",
+      300: "#a5b4fc",
+      400: "#818cf8",
+      500: "#6366f1",
+      600: "#4f46e5",
+      700: "#4338ca",
+      800: "#3730a3",
+      900: "#312e81",
+      950: "#1e1b4b",
+    },
+  },
+];
+
+/** Surface color palettes for theme selection */
+export const surfacePalettes: ThemePalette[] = [
+  {
+    name: "slate",
+    label: "Slate",
+    color: "#64748b",
+    palette: {
+      0: "#ffffff",
+      50: "#f8fafc",
+      100: "#f1f5f9",
+      200: "#e2e8f0",
+      300: "#cbd5e1",
+      400: "#94a3b8",
+      500: "#64748b",
+      600: "#475569",
+      700: "#334155",
+      800: "#1e293b",
+      900: "#0f172a",
+      950: "#020617",
+    },
+  },
+  {
+    name: "gray",
+    label: "Gray",
+    color: "#6b7280",
+    palette: {
+      0: "#ffffff",
+      50: "#f9fafb",
+      100: "#f3f4f6",
+      200: "#e5e7eb",
+      300: "#d1d5db",
+      400: "#9ca3af",
+      500: "#6b7280",
+      600: "#4b5563",
+      700: "#374151",
+      800: "#1f2937",
+      900: "#111827",
+      950: "#030712",
+    },
+  },
+  {
+    name: "zinc",
+    label: "Zinc",
+    color: "#71717a",
+    palette: {
+      0: "#ffffff",
+      50: "#fafafa",
+      100: "#f4f4f5",
+      200: "#e4e4e7",
+      300: "#d4d4d8",
+      400: "#a1a1aa",
+      500: "#71717a",
+      600: "#52525b",
+      700: "#3f3f46",
+      800: "#27272a",
+      900: "#18181b",
+      950: "#09090b",
+    },
+  },
+  {
+    name: "stone",
+    label: "Stone",
+    color: "#78716c",
+    palette: {
+      0: "#ffffff",
+      50: "#fafaf9",
+      100: "#f5f5f4",
+      200: "#e7e5e4",
+      300: "#d6d3d1",
+      400: "#a8a29e",
+      500: "#78716c",
+      600: "#57534e",
+      700: "#44403c",
+      800: "#292524",
+      900: "#1c1917",
+      950: "#0c0a09",
+    },
+  },
+];

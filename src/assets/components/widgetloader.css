@@ -1,0 +1,23 @@
+.widget-loader {
+  @apply justify-between grow
+}
+
+.widget-loader .draggable-card-inner {
+  @apply grow;
+}
+
+.widget-loader-inner {
+  @apply flex flex-col w-full h-full gap-4 grow;
+}
+
+.widget-loader-content {
+  @apply flex min-h-0 h-full w-full items-center justify-center rounded-lg grow
+}
+
+.widget-error-msg {
+  @apply text-sm text-rose-600 font-medium px-6 text-center
+}
+
+.widget-error-popover-title {
+  @apply text-sm text-rose-600 font-medium
+}

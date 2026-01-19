@@ -1,0 +1,89 @@
+/* KPI Card Styles */
+.kpicard {
+  @apply flex flex-col h-fit rounded-lg
+}
+
+/* When kpicard has flex-basis-0, allow it to grow */
+.kpicard.flex-\[1_1_0\] {
+  @apply grow
+}
+
+.kpicard-body {
+  @apply flex bg-white dark:bg-surface-800 gap-4 rounded-lg min-w-0 overflow-hidden
+}
+
+.kpicard-iconwrapper {
+  @apply flex items-center justify-center size-12 p-3 rounded-lg my-0.5
+}
+
+.kpicard-icon {
+  @apply text-xl! text-white
+}
+
+.kpicard-content {
+  @apply flex flex-col grow min-w-0
+}
+
+.kpicard-content.kpicard-donut {
+  @apply flex-col-reverse gap-0.5
+}
+
+.kpicard-label-wrapper {
+  @apply flex items-baseline min-w-0 truncate
+}
+
+.kpicard-leadinglabel-wrapper {
+  @apply flex flex-row gap-1 min-w-0
+}
+
+.kpicard-growth-wrapper {
+  @apply flex justify-end gap-1 leading-5 shrink-0
+}
+
+.kpicard-growth-wrapper i {
+  @apply flex items-center text-xs!
+}
+
+.kpicard-growthlabel {
+  @apply text-sm font-semibold
+}
+
+.kpicard-leadinglabel {
+  @apply text-sm text-surface-500 dark:text-surface-400 font-medium min-h-5 truncate min-w-0
+}
+
+.kpicard-label {
+  @apply text-3xl font-semibold text-surface-900 dark:text-surface-100 truncate min-w-0
+}
+
+.kpicard.kpicard-medium .kpicard-label {
+  @apply text-2xl
+}
+
+.kpicard.kpicard-small .kpicard-label {
+  @apply text-base
+}
+
+.kpicard.kpicard-small .kpicard-sublabel {
+  @apply text-base
+}
+
+.kpicard-sublabel {
+  @apply text-xl font-normal text-surface-500 dark:text-surface-400 truncate min-w-0
+}
+
+.kpicard-comparelabel {
+  @apply text-xl font-semibold text-surface-400 truncate min-w-0
+}
+
+.kpicard-comparelabel-divider {
+  @apply mx-2 -mb-[1px] w-[2px] bg-surface-400 h-4
+}
+
+.kpicard.kpicard-small .kpicard-comparelabel {
+  @apply text-base
+}
+
+.kpicard-link {
+  @apply min-w-max
+}
