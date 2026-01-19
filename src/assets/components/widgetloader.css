@@ -1,0 +1,29 @@
+.widget-loader {
+  @apply justify-between grow
+}
+
+.widget-loader .draggable-card-inner {
+  @apply grow;
+}
+
+.widget-loader-inner {
+  @apply flex flex-col w-full h-full gap-4 grow;
+}
+
+.widget-loader-content {
+  @apply flex min-h-0 h-full w-full items-center justify-center rounded-lg grow
+}
+
+.widget-error-msg {
+  @apply text-sm text-rose-600 font-medium px-6 text-center
+}
+
+.widget-error-popover-title {
+  @apply text-sm text-rose-600 font-medium
+}
+
+.widget-spinner {
+  @apply w-10 h-10 rounded-full border-4 border-surface-200 dark:border-surface-600;
+  border-top-color: var(--p-primary-500);
+  animation: spin 0.8s linear infinite;
+}

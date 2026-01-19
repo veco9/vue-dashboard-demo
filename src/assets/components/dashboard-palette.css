@@ -1,0 +1,113 @@
+/* Dashboard Palette Styles */
+.dashboard-palette {
+  @apply flex flex-col bg-surface-900 dark:bg-primary-100 fixed bottom-6 left-8 right-8 z-[1000] px-2 py-3 rounded-xl;
+}
+
+.dashboard-palette:has(.dashboard-palette-items-emptystate) {
+  @apply px-3;
+}
+
+.dashboard-palette-search {
+  @apply mt-[1px] max-w-[250px];
+}
+
+.dashboard-palette-emptystate {
+  @apply text-sm text-surface-500 dark:text-surface-400;
+}
+
+.dashboard-palette-carousel {
+  @apply w-full;
+}
+
+.dashboard-palette-carousel .p-carousel-content {
+  @apply gap-2.5 items-center;
+}
+
+.dashboard-palette-carousel .p-carousel-viewport,
+.dashboard-palette-carousel .p-carousel-content-container {
+  @apply overflow-hidden!;
+}
+
+.dashboard-palette-carousel .p-carousel-item-list {
+  @apply gap-0;
+}
+
+.dashboard-palette-carousel .p-carousel-item {
+  @apply flex justify-center;
+}
+
+.dashboard-palette-carousel .p-carousel-prev-button,
+.dashboard-palette-carousel .p-carousel-next-button {
+  @apply flex rounded-md items-center justify-center text-white dark:text-surface-900 p-1.5 max-w-7 cursor-pointer;
+  @apply hover:bg-white/10 hover:text-white! dark:hover:bg-surface-700;
+}
+
+.dashboard-palette-items {
+  @apply flex flex-row justify-center gap-2.5;
+}
+
+.dashboard-palette-items-emptystate {
+  @apply flex flex-row py-5 px-2.5 w-full h-full items-center justify-center bg-surface-800 dark:bg-primary-100 rounded-lg;
+}
+
+.dashboard-palette-items-emptystate-label {
+  @apply text-sm font-medium text-white dark:text-surface-900 select-none;
+}
+
+.dashboard-palette-item {
+  @apply flex flex-col rounded-lg cursor-move text-white;
+  @apply min-h-[60px] max-h-[60px] min-w-[200px] w-full relative mx-1.5;
+  @apply bg-surface-700 dark:bg-surface-900 shadow-md;
+  @apply hover:bg-surface-600 hover:dark:bg-surface-700 transition-colors;
+}
+
+.dashboard-palette-item-placeholder {
+  @apply cursor-default bg-surface-700 hover:bg-surface-800 select-none pointer-events-none;
+}
+
+.dashboard-palette-item-icon-wrapper {
+  @apply flex items-center rounded-lg p-2.5;
+}
+
+.dashboard-palette-item-icon {
+  @apply flex! items-center! text-white !text-xl h-5;
+}
+
+.dashboard-palette-item > .dashboard-palette-item-inner {
+  @apply flex flex-row items-center gap-4 p-2.5 h-full;
+}
+
+.dashboard-palette-item-label {
+  @apply text-xs font-medium text-white;
+}
+
+.dashboard-palette-item img {
+  @apply max-h-[32px] max-w-[32px];
+}
+
+/* Hide loader by default */
+.dashboard-palette-item-loader {
+  @apply hidden;
+}
+
+/* When dragging: hide content, show loader */
+.dashboard-palette-item.dragging > .dashboard-palette-item-inner {
+  @apply hidden;
+}
+
+.dashboard-palette-item.dragging > .dashboard-palette-item-loader {
+  @apply flex!;
+}
+
+/* Center loader content vertically in palette items */
+.dashboard-palette-item-loader .draggable-card-inner {
+  @apply flex-row h-full;
+}
+
+.dashboard-palette-item-loader .widget-header-end {
+  @apply hidden;
+}
+
+.dashboard-palette-item-loader .widget-loader-inner {
+  @apply justify-center h-auto;
+}

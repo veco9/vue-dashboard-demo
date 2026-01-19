@@ -1,0 +1,23 @@
+/* Dashboard Header Styles */
+.dashboard-header {
+  @apply flex items-center justify-between px-3 py-1 dark:bg-surface-900 border-b border-surface-200 dark:border-surface-950;
+  @apply sm:px-6;
+}
+
+.dashboard-header-left {
+  @apply flex flex-col gap-0.5;
+}
+
+.dashboard-header-title {
+  @apply m-0 text-lg font-semibold text-surface-900 dark:text-surface-200;
+  @apply sm:text-xl;
+}
+
+.dashboard-header-subtitle {
+  @apply text-xs text-surface-500 dark:text-surface-400;
+  @apply sm:text-sm;
+}
+
+.dashboard-header-right {
+  @apply flex items-center gap-3;
+}

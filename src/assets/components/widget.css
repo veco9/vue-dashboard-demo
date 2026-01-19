@@ -1,0 +1,115 @@
+/* ========================================
+   Widget Base Styles
+   ======================================== */
+
+.widget {
+  @apply flex flex-col rounded-lg shadow-md dark:shadow-none h-full bg-white dark:bg-surface-800;
+  transition: 0.2s ease;
+  transition-property: transform;
+}
+
+.widget .draggable-card-inner {
+  @apply flex w-full h-full p-5 gap-2 min-w-0 overflow-hidden;
+}
+
+.widget .widget-inner {
+  @apply flex flex-col w-full gap-4 h-full min-w-0 overflow-hidden;
+}
+
+/* ========================================
+   Widget KPI Modifier
+   ======================================== */
+
+.widget.widget-kpi {
+  @apply justify-between;
+}
+
+.widget.widget-kpi .widget-inner {
+  @apply gap-3;
+  container-type: size;
+}
+
+/* ========================================
+   Widget Content Areas
+   ======================================== */
+
+/* KPI content layout */
+.widget-kpi-content {
+  @apply flex flex-row divide-x divide-surface-300 dark:divide-surface-700 min-w-0 overflow-hidden
+}
+
+.widget-kpi-content--grid {
+  @apply grid
+}
+
+.widget-kpi-content .kpicard {
+  @apply rounded-none px-6 last:pr-0 first:pl-0 min-w-0;
+}
+
+/* Chart content layout */
+.widget-chart-content {
+  @apply grid w-full min-h-0 grow;
+}
+
+.widget-chart-content.min-h-fit {
+  @apply grow-0 shrink-0;
+}
+
+/* ========================================
+   Widget Footer
+   ======================================== */
+
+.widget-footer {
+  @apply flex flex-row gap-2;
+}
+
+.widget-footer-icon {
+  @apply text-base text-surface-500 dark:text-surface-400;
+}
+
+.widget-footer-label {
+  @apply text-xs text-surface-500 dark:text-surface-400 line-clamp-2;
+}
+
+/* ========================================
+   Animation
+   ======================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up-enter-active {
+  animation: 1s fadeInUp;
+}
+
+/* ========================================
+   Widget Transitions (add/remove)
+   ======================================== */
+
+.widget-transition-enter-active,
+.widget-transition-leave-active {
+  transition: opacity 0.25s ease,
+  transform 0.25s ease;
+}
+
+.widget-transition-enter-from {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.widget-transition-leave-to {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.widget-transition-leave-active {
+  position: absolute;
+}

@@ -1,0 +1,25 @@
+/* Draggable card styles */
+.draggable-card {
+  @apply relative;
+}
+
+.draggable-card-inner {
+  @apply flex;
+}
+
+.draggable-handle {
+  @apply h-6 text-primary-900 dark:text-primary-100 -ml-2 content-center cursor-grab;
+}
+
+.draggable-handle:active {
+  @apply cursor-grabbing;
+}
+
+/* Empty state */
+.ag-chart-emptystate {
+  @apply flex flex-col items-center justify-center gap-2 h-full w-full py-8;
+}
+
+.ag-chart-emptystate-label {
+  @apply text-sm text-surface-500 dark:text-surface-400;
+}

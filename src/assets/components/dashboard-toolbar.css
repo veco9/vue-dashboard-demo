@@ -1,0 +1,109 @@
+/* Dashboard Toolbar Styles */
+.dashboard-toolbar {
+  @apply flex flex-wrap items-center justify-between gap-2 px-3 py-2 dark:bg-surface-900 border-b border-surface-200 dark:border-surface-950 sticky z-50 top-0;
+  @apply sm:gap-4 sm:px-4;
+}
+
+/* Hide button labels on mobile, show on sm+ */
+.dashboard-toolbar .p-button-label {
+  @apply hidden sm:inline dark:text-white;
+}
+
+.dashboard-toolbar .p-button-icon {
+  @apply dark:text-white;
+}
+
+.dashboard-toolbar-left {
+  @apply flex items-center gap-2;
+}
+
+.dashboard-toolbar-right {
+  @apply flex items-center gap-2;
+}
+
+/* Period Picker */
+.period-picker-wrapper {
+  @apply relative;
+}
+
+.period-picker-wrapper i {
+  @apply dark:text-white;
+}
+
+
+.period-picker-btn-label {
+  @apply text-sm mx-2
+}
+
+/* Period Popover */
+.period-popover-content {
+  @apply flex flex-col gap-4 min-w-[235px] w-[min(240px,calc(100vw-2rem))];
+}
+
+.period-popover-header {
+  @apply flex border-b border-surface-200 dark:border-surface-700 pb-2;
+}
+
+.period-popover-title {
+  @apply font-semibold text-sm text-surface-800 dark:text-surface-200;
+}
+
+.period-popover-actions {
+  @apply flex justify-end gap-2 border-t border-surface-200 dark:border-surface-700 py-3;
+}
+
+/* Date Presets */
+.period-presets {
+  @apply flex flex-wrap gap-1.5;
+}
+
+.period-preset-btn {
+  @apply px-2.5 py-1 text-xs font-medium rounded-md
+  bg-surface-100 dark:bg-surface-700
+  text-surface-600 dark:text-surface-300
+  hover:bg-surface-200 dark:hover:bg-surface-600
+  transition-colors cursor-pointer border-0;
+}
+
+.period-preset-btn.active {
+  @apply bg-primary-500 text-white hover:bg-primary-600;
+}
+
+/* Date Inputs */
+.date-inputs-wrapper {
+  @apply flex flex-col gap-2;
+}
+
+.date-input-group {
+  @apply flex flex-col gap-1;
+}
+
+.date-input-label {
+  @apply text-xs font-medium text-surface-500 dark:text-surface-400;
+}
+
+.date-input-error {
+  @apply text-red-500 text-xs;
+}
+
+/* Compare Toggle */
+.compare-toggle-wrapper {
+  @apply flex items-center gap-2;
+}
+
+.compare-toggle-label {
+  @apply text-sm text-surface-600 dark:text-surface-200 cursor-pointer select-none;
+}
+
+.compare-preview {
+  @apply flex items-center gap-2 px-3 py-3 bg-surface-100 dark:bg-surface-700 rounded text-xs text-surface-500 dark:text-surface-200;
+}
+
+.compare-preview-icon {
+  @apply text-primary-400;
+}
+
+/* Keyboard shortcut indicator - underline first letter */
+.shortcut-button .p-button-label::first-letter {
+  text-decoration: underline;
+}

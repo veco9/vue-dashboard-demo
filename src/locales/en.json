@@ -1,0 +1,170 @@
+{
+  "aria": {
+    "downloadChart": "Download chart",
+    "removeWidget": "Remove widget",
+    "retryWidget": "Retry loading widget",
+    "skipToContent": "Skip to main content",
+    "viewErrorDetails": "View error details"
+  },
+  "dashboard": {
+    "emptyState": {
+      "editModeSubtitle": "Drag widgets from the palette below",
+      "subtitle": "Click Edit to start adding widgets",
+      "title": "No widgets yet"
+    }
+  },
+  "dashboardTitle": "Dashboard",
+  "datePresets": {
+    "last7Days": "Last 7 days",
+    "lastMonth": "Last month",
+    "lastWeek": "Last week",
+    "thisMonth": "This month",
+    "thisQuarter": "This quarter",
+    "thisWeek": "This week",
+    "today": "Today",
+    "yearToDate": "Year to date",
+    "yesterday": "Yesterday"
+  },
+  "loadingOoo": "Loading...",
+  "palette": {
+    "emptyState": "You've added all available widgets",
+    "widgetAdded": "Widget added to end of the dashboard"
+  },
+  "sidebar": {
+    "home": "Home",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "theme": {
+    "selectPrimaryColor": "Select {label} as primary color",
+    "selectSurfaceColor": "Select {label} as surface color"
+  },
+  "toolbar": {
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "compareWithLastYear": "Compare with last year",
+    "done": "Done",
+    "editDashboard": "Edit dashboard",
+    "endDate": "End date",
+    "from": "From",
+    "refresh": "Refresh",
+    "resetDashboard": "Reset Dashboard",
+    "selectPeriod": "Select period",
+    "simulateError": "Simulate Error",
+    "simulateLoading": "Simulate Loading",
+    "startDate": "Start date",
+    "to": "To"
+  },
+  "validation": {
+    "dateFromRequired": "From date is required",
+    "dateToAfterFrom": "To date must be after From date",
+    "dateToRequired": "To date is required"
+  },
+  "widget": {
+    "comparison": "Comparison",
+    "errorMsg": "An error occurred while loading the widget",
+    "retry": "Retry"
+  },
+  "widgets": {
+    "axes": {
+      "adoptionPercent": "Adoption %",
+      "arpuUsd": "ARPU ($)",
+      "date": "Date",
+      "month": "Month",
+      "revenueUsd": "Revenue ($)"
+    },
+    "categories": {
+      "activated": "Activated",
+      "apac": "APAC",
+      "apiAccess": "API Access",
+      "automations": "Automations",
+      "competitor": "Competitor",
+      "dashboard": "Dashboard",
+      "direct": "Direct",
+      "emea": "EMEA",
+      "enterprise": "Enterprise",
+      "integrations": "Integrations",
+      "latam": "LATAM",
+      "midMarket": "Mid-Market",
+      "missingFeatures": "Missing Features",
+      "na": "NA",
+      "northAmerica": "North America",
+      "organicSearch": "Organic Search",
+      "paid": "Paid",
+      "paidAds": "Paid Ads",
+      "poorSupport": "Poor Support",
+      "price": "Price",
+      "pro": "Pro",
+      "referral": "Referral",
+      "reports": "Reports",
+      "smb": "SMB",
+      "starter": "Starter",
+      "trial": "Trial",
+      "visitors": "Visitors"
+    },
+    "labels": {
+      "activeTrials": "Active Trials",
+      "arpu": "ARPU",
+      "atRisk": "At Risk",
+      "churned": "Churned",
+      "churnedCustomers": "Churned Customers",
+      "churnedMrr": "Churned MRR",
+      "contraction": "Contraction",
+      "convertedThisMonth": "Converted This Month",
+      "count": "Count",
+      "current": "Current",
+      "customers": "Customers",
+      "dau": "DAU",
+      "expansion": "Expansion",
+      "expansionRevenue": "Expansion Revenue",
+      "expiredTrials": "Expired Trials",
+      "mau": "MAU",
+      "newArr": "New ARR",
+      "newMrr": "New MRR",
+      "previous": "Previous",
+      "revenue": "Revenue",
+      "signups": "Signups",
+      "totalCustomers": "Total Customers",
+      "usage": "Usage"
+    },
+    "subtitles": {
+      "updatesAutomatically": "Updates every 0.5s"
+    },
+    "titles": {
+      "absenceTrend": "Absence Trend",
+      "activeUsers": "Active Users",
+      "annualLeave": "Annual Leave",
+      "arpuTrend": "ARPU Trend",
+      "arr": "Annual Recurring Revenue",
+      "churnByReason": "Churn by Reason",
+      "churnRate": "Churn Rate",
+      "contractorTypes": "Contractor Types",
+      "conversionFunnel": "Conversion Funnel",
+      "customerAcquisition": "Customer Acquisition",
+      "customerSegments": "Customer Segments",
+      "employeeOverview": "Employee Overview",
+      "employeeTurnover": "Employee Turnover",
+      "employeesByDepartment": "Employees by Department",
+      "featureAdoption": "Feature Adoption",
+      "fte": "FTE",
+      "liveStockPrices": "Live Stock Prices",
+      "mrr": "Monthly Recurring Revenue",
+      "mrrTrend": "MRR Trend",
+      "newStudents": "New Students",
+      "nrr": "Net Revenue Retention",
+      "overtime": "Overtime",
+      "overtimeByDepartment": "Overtime by Department",
+      "revenueByPlan": "Revenue by Plan",
+      "revenueByRegion": "Revenue by Region",
+      "salariesByDepartment": "Salaries by Department",
+      "signupTrend": "Signup Trend",
+      "studentOverview": "Student Overview",
+      "studentTurnover": "Student Turnover",
+      "totalDue": "Total Due",
+      "totalEmployees": "Total Employees",
+      "totalStudents": "Total Students",
+      "trafficSummary": "Traffic Summary",
+      "trialConversion": "Trial Conversion"
+    }
+  }
+}

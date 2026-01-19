@@ -1,0 +1,84 @@
+.widget-header {
+  @apply flex flex-row justify-between items-start
+}
+
+.widget-header-start {
+  @apply flex flex-col gap-1
+}
+
+.widget-header-end {
+  @apply flex items-center -mt-2 -mr-2
+}
+
+.widget-header-title-wrapper {
+  @apply flex flex-row gap-2 items-baseline
+}
+
+.widget-header-titlelabel {
+  @apply text-surface-900 dark:text-surface-100 font-semibold leading-6
+}
+
+h2.widget-header-titlelabel {
+  all: unset;
+  @apply text-surface-900 dark:text-surface-100 font-semibold leading-6
+}
+
+.widget-header-start.subtitle-first {
+  @apply flex-col-reverse gap-0
+}
+
+.widget-header-start.subtitle-first .widget-header-titlelabel {
+  @apply text-3xl
+}
+
+.widget-header-title-growthlabel {
+  @apply text-sm font-semibold leading-5
+}
+
+.widget-header-subtitle-wrapper {
+  @apply flex flex-row gap-2 min-h-5 empty:hidden
+}
+
+.widget-header-subtitleitem-wrapper {
+  @apply flex gap-2 items-center justify-center
+}
+
+.widget-header-subtitleitem-indicator {
+  @apply w-2 h-2 rounded-2xl
+}
+
+.widget-header-subtitleitem-label {
+  @apply text-surface-500 dark:text-surface-400 text-sm
+}
+
+.widget-header-divider {
+  @apply flex self-stretch relative justify-center w-px bg-surface-300 dark:bg-surface-600
+}
+
+.widget-header-popover {
+  @apply my-1 w-[280px]
+}
+
+.widget-header-popover::before {
+  @apply hidden
+}
+
+.widget-header-popover::after {
+  @apply hidden
+}
+
+.widget-header-popover-content {
+  @apply flex flex-col gap-4 p-4
+}
+
+.widget-header-popover .p-popover-content {
+  @apply p-0
+}
+
+.widget-header-popover-radiobutton-wrapper {
+  @apply flex flex-row gap-4
+}
+
+.widget-header-popover-footer {
+  @apply flex flex-row items-center justify-center py-3 px-4 border-t border-surface-200
+}
