@@ -20,6 +20,8 @@ interface DropZoneState {
   pendingItem: LayoutItem;
   active: boolean;
   aborted: boolean;
+  shiftX: number;
+  shiftY: number;
 }
 
 const emptyLayoutItem: LayoutItem = { x: -1, y: -1, w: 1, h: 1, i: "" };
@@ -45,6 +47,8 @@ export function useGridDragDrop(
     pendingItem: { ...emptyLayoutItem },
     active: false,
     aborted: false,
+    shiftX: 0,
+    shiftY: 0,
   });
 
   const { x: pointerX, y: pointerY } = useMouse();
@@ -55,6 +59,8 @@ export function useGridDragDrop(
       pendingItem: { ...emptyLayoutItem },
       active: false,
       aborted: false,
+      shiftX: 0,
+      shiftY: 0,
     };
   }
 
@@ -135,11 +141,14 @@ export function useGridDragDrop(
     }
 
     Object.assign(gridItem.state, {
-      top: pointerY.value - bounds.top,
-      left: pointerX.value - bounds.left,
+      top: pointerY.value - bounds.top - dropState.value.shiftY,
+      left: pointerX.value - bounds.left - dropState.value.shiftX,
     });
 
-    const gridPos = gridItem.calcXY(pointerY.value - bounds.top, pointerX.value - bounds.left);
+    const gridPos = gridItem.calcXY(
+      pointerY.value - bounds.top - dropState.value.shiftY,
+      pointerX.value - bounds.left - dropState.value.shiftX,
+    );
 
     if (isInsideGrid) {
       gridRef.value.dragEvent(
@@ -203,6 +212,17 @@ export function useGridDragDrop(
       gridGap[0],
     );
     const itemWidth = computeItemWidth(colWidth, gridGap[0]);
+    const itemHeightPx =
+      dropState.value.pendingItem.h * cellHeight +
+      (dropState.value.pendingItem.h - 1) * gridGap[0];
+
+    // Calculate proportional shift: scale click offset from source element to grid widget size
+    const sourceEl = (e.target as HTMLElement).closest(".dashboard-palette-item") as HTMLElement;
+    if (sourceEl) {
+      const sourceRect = sourceEl.getBoundingClientRect();
+      dropState.value.shiftX = ((e.clientX - sourceRect.left) / sourceRect.width) * itemWidth;
+      dropState.value.shiftY = ((e.clientY - sourceRect.top) / sourceRect.height) * itemHeightPx;
+    }
 
     ghostElement.style.position = "absolute";
     ghostElement.style.top = "-1000px";
@@ -217,7 +237,7 @@ export function useGridDragDrop(
     ghostElement.classList.add("dragging");
 
     document.body.appendChild(ghostElement);
-    e.dataTransfer?.setDragImage(ghostElement, e.offsetX, e.offsetY);
+    e.dataTransfer?.setDragImage(ghostElement, dropState.value.shiftX, dropState.value.shiftY);
     setTimeout(() => ghostElement?.remove(), 0);
 
     sourceElement.style.transform = "unset";
